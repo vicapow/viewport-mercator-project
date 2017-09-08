@@ -1,7 +1,6 @@
 // View and Projection Matrix calculations for mapbox-js style map view properties
 import MercatorViewport from './mercator-viewport';
-import autobind from './autobind';
-import assert from 'assert';
+import assert from './assert';
 
 import {
   projectFlat,
@@ -132,7 +131,6 @@ export default class WebMercatorViewport extends MercatorViewport {
 
     this._distanceScales = distanceScales;
 
-    autobind(this);
     Object.freeze(this);
   }
   /* eslint-enable complexity */

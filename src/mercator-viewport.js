@@ -10,9 +10,7 @@ import mat4_invert from 'gl-mat4/invert';
 import vec4_multiply from 'gl-vec4/multiply';
 import vec4_transformMat4 from 'gl-vec4/transformMat4';
 import vec2_lerp from 'gl-vec2/lerp';
-
-import autobind from './autobind';
-import assert from 'assert';
+import assert from './assert';
 
 function createMat4() {
   return [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
@@ -97,8 +95,6 @@ export default class MercatorViewport {
 
     this.pixelProjectionMatrix = m;
     this.pixelUnprojectionMatrix = mInverse;
-
-    autobind(this);
   }
   /* eslint-enable complexity */
 
